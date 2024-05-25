@@ -4,11 +4,7 @@ export const StyledButtonWrapper = styled.div`
   display: block;
 `;
 
-export const getButtonStyles = (
-  variant: string,
-  hovered: boolean,
-  borderColor: string
-) => {
+export const getButtonStyles = (variant: string, hovered: boolean) => {
   switch (variant) {
     case "outline":
       return {
@@ -16,9 +12,9 @@ export const getButtonStyles = (
         height: "56px",
         fontSize: "16px",
         fontWeight: "700",
-        border: `1px solid ${borderColor}`,
+        border: "1px solid #FF7000",
         color: hovered ? "#FF7000" : "#FF7000",
-        backgroundColor: hovered ? "#FFD8B8" : "#ffffff",
+        backgroundColor: hovered ? "#FFD8B8" : "transparent",
         transition: "0.2s",
       };
     case "m_outline":
@@ -27,9 +23,9 @@ export const getButtonStyles = (
         height: "32px",
         fontSize: "14px",
         fontWeight: "500",
-        border: `1px solid ${borderColor}`,
+        border: "1px solid #FF7000",
         color: hovered ? "#FF7000" : "#FF7000",
-        backgroundColor: hovered ? "#FFD8B8" : "#ffffff",
+        backgroundColor: hovered ? "#FFD8B8" : "transparent",
         transition: "0.2s",
       };
     default:
